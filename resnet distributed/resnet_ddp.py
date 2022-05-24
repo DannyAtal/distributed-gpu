@@ -122,7 +122,7 @@ def main():
 
     # Data should be prefetched
     # Download should be set to be False, because it is not multiprocess safe
-    train_set = torchvision.datasets.CIFAR10(root="/data", train=True, download=True, transform=transform) 
+    train_set = torchvision.datasets.CIFAR10(root="/resnet distributed/data", train=True, download=True, transform=transform) 
     test_set = torchvision.datasets.CIFAR10(root="/data", train=False, download=True, transform=transform)
 
     # Restricts data loading to a subset of the dataset exclusive to the current process
